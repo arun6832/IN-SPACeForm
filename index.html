@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Applicant Form
+    </title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles2.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="sidebar">
+            <!-- Vertical Progress Bar -->
+            <div class="progress-bar">
+                <!-- Section 1 -->
+                <div class="progress-step">
+                    <div class="dot" id="dot-1"><span class="dot-number">1</span></div>
+                    <div class="label" id="label-1">Section 1</div>
+                    <div class="line" id="line-1"></div>
+                </div>
+
+                <!-- Section 2 -->
+                <div class="progress-step">
+                    <div class="dot" id="dot-2"><span class="dot-number">2</span></div>
+                    <div class="label" id="label-2">Section 2</div>
+                    <div class="line" id="line-2"></div>
+                </div>
+
+                <!-- Section 3 -->
+                <div class="progress-step">
+                    <div class="dot" id="dot-3"><span class="dot-number">3</span></div>
+                    <div class="label" id="label-3">Section 3</div>
+                    <div class="line" id="line-3"></div>
+                </div>
+
+                <!-- Section 4 -->
+                <div class="progress-step">
+                    <div class="dot" id="dot-4"><span class="dot-number">4</span></div>
+                    <div class="label" id="label-4">Section </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <!-- Title section -->
+            <div class="title">Registration</div>
+            <div class="content">
+                <!-- Registration form -->
+                <form action="#">
+                    <div class="user-details">
+                        <!-- Input for Full Name -->
+                        <div class="input-box">
+                            <span class="details">Legal Name</span>
+                            <input type="text" placeholder="Enter your Legal name" required>
+                        </div>
+                        <!-- Input for Username -->
+                        <div class="input-box">
+                            <span class="details">Trade/Brand Name (if applicable)</span>
+                            <input type="text" placeholder="Enter your brand name" required>
+                        </div>
+                        <!-- Input for Email -->
+                        <div class="input-box" style="width: 100%;">
+                            <span class="details">Briefly describe the nature of your business and relevant expertise.</span>
+                            <textarea placeholder="" required style="width: 100%; height: 100px; resize: vertical;"></textarea>
+                        </div>
+                        
+        
+                       
+                    </div>
+                    <div class="gender-details">
+                        <!-- Radio buttons for gender selection -->
+                        <input type="radio" name="gender" id="dot-1">
+                        <input type="radio" name="gender" id="dot-2">
+                        <input type="radio" name="gender" id="dot-3">
+                        <span class="gender-title">Gender</span>
+                        <div class="category">
+                            <!-- Label for Male -->
+                            <label for="dot-1">
+                                <span class="dot one"></span>
+                                <span class="gender">Male</span>
+                            </label>
+                            <!-- Label for Female -->
+                            <label for="dot-2">
+                                <span class="dot two"></span>
+                                <span class="gender">Female</span>
+                            </label>
+                            <!-- Label for Prefer not to say -->
+                            <label for="dot-3">
+                                <span class="dot three"></span>
+                                <span class="gender">Prefer not to say</span>
+                            </label>
+                        </div>
+                    </div>
+                    <!-- Submit button -->
+                    <div class="button">
+                        <input type="submit" value="Register">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
