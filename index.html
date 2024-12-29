@@ -4,10 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Applicant Form
-    </title>
+    <title>Applicant Form</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="styles2.css">
 </head>
 
 <body>
@@ -15,88 +13,265 @@
         <div class="sidebar">
             <!-- Vertical Progress Bar -->
             <div class="progress-bar">
-                <!-- Section 1 -->
                 <div class="progress-step">
                     <div class="dot" id="dot-1"><span class="dot-number">1</span></div>
                     <div class="label" id="label-1">Section 1</div>
                     <div class="line" id="line-1"></div>
                 </div>
-
-                <!-- Section 2 -->
                 <div class="progress-step">
                     <div class="dot" id="dot-2"><span class="dot-number">2</span></div>
                     <div class="label" id="label-2">Section 2</div>
                     <div class="line" id="line-2"></div>
                 </div>
-
-                <!-- Section 3 -->
                 <div class="progress-step">
                     <div class="dot" id="dot-3"><span class="dot-number">3</span></div>
                     <div class="label" id="label-3">Section 3</div>
                     <div class="line" id="line-3"></div>
                 </div>
-
-                <!-- Section 4 -->
                 <div class="progress-step">
                     <div class="dot" id="dot-4"><span class="dot-number">4</span></div>
-                    <div class="label" id="label-4">Section </div>
+                    <div class="label" id="label-4">Section 4</div>
                 </div>
             </div>
+        
+            <!-- Sidebar Logo -->
+            <img src="IN-SPACeForm\IN-SPACe_Logo.png" alt="Logo" class="sidebar-logo">
         </div>
+        
 
         <div class="container">
             <!-- Title section -->
-            <div class="title">Registration</div>
+            <div class="title">Basic Details</div>
             <div class="content">
-                <!-- Registration form -->
                 <form action="#">
                     <div class="user-details">
-                        <!-- Input for Full Name -->
                         <div class="input-box">
                             <span class="details">Legal Name</span>
                             <input type="text" placeholder="Enter your Legal name" required>
                         </div>
-                        <!-- Input for Username -->
                         <div class="input-box">
                             <span class="details">Trade/Brand Name (if applicable)</span>
                             <input type="text" placeholder="Enter your brand name" required>
                         </div>
-                        <!-- Input for Email -->
                         <div class="input-box" style="width: 100%;">
-                            <span class="details">Briefly describe the nature of your business and relevant expertise.</span>
-                            <textarea placeholder="" required style="width: 100%; height: 100px; resize: vertical;"></textarea>
+                            <span class="details">Briefly describe the nature of your business and relevant
+                                expertise.</span>
+                            <textarea placeholder="" required
+                                style="width: 100%; height: 100px; resize: vertical;"></textarea>
                         </div>
-                        
-        
-                       
                     </div>
                     <div class="gender-details">
-                        <!-- Radio buttons for gender selection -->
-                        <input type="radio" name="gender" id="dot-1">
-                        <input type="radio" name="gender" id="dot-2">
-                        <input type="radio" name="gender" id="dot-3">
-                        <span class="gender-title">Gender</span>
+                        <span class="gender-title">Have you previously applied to IN-SPACe?</span>
                         <div class="category">
-                            <!-- Label for Male -->
-                            <label for="dot-1">
+                            <label for="checkbox-yes-1">
+                                <input type="checkbox" id="checkbox-yes-1" class="checkbox"
+                                    onclick="toggleTextarea('no-textarea-1', 'yes-textarea-1', false, 'checkbox-no-1')">
                                 <span class="dot one"></span>
-                                <span class="gender">Male</span>
+                                <span class="gender">Yes</span>
                             </label>
-                            <!-- Label for Female -->
-                            <label for="dot-2">
+                            <label for="checkbox-no-1">
+                                <input type="checkbox" id="checkbox-no-1" class="checkbox"
+                                    onclick="toggleTextarea('no-textarea-1', 'yes-textarea-1', true, 'checkbox-yes-1')">
                                 <span class="dot two"></span>
-                                <span class="gender">Female</span>
-                            </label>
-                            <!-- Label for Prefer not to say -->
-                            <label for="dot-3">
-                                <span class="dot three"></span>
-                                <span class="gender">Prefer not to say</span>
+                                <span class="gender">No</span>
                             </label>
                         </div>
                     </div>
+                    <div id="no-textarea-1" style="display: none;">
+                        <label for="additional-info-no-1">Please provide more details:</label>
+                        <textarea id="additional-info-no-1" placeholder="Enter details here..."></textarea>
+                    </div>
+                    <br><br>
+                    <div class="gender-details">
+                        <span class="gender-title">Is this application for an amendment or extension of a previous
+                            authorization by IN-SPACe?
+                        </span>
+                        <div class="category">
+                            <label for="checkbox-yes-2">
+                                <input type="checkbox" id="checkbox-yes-2" class="checkbox"
+                                    onclick="toggleTextarea('yes-textarea-2', 'no-textarea-2', true, 'checkbox-no-2')">
+                                <span class="dot one"></span>
+                                <span class="gender">Yes</span>
+                            </label>
+                            <label for="checkbox-no-2">
+                                <input type="checkbox" id="checkbox-no-2" class="checkbox"
+                                    onclick="toggleTextarea('no-textarea-2', 'yes-textarea-2', false, 'checkbox-yes-2')">
+                                <span class="dot two"></span>
+                                <span class="gender">No</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div id="yes-textarea-2" style="display: none;">
+                        <label for="additional-info-yes-2">Please provide more details about your first
+                            application:</label>
+                        <textarea id="additional-info-yes-2" placeholder="Enter details here..."></textarea>
+                    </div>
+                    <br>
+                    <div class="gender-details">
+                        <span class="gender-title">Provide details of any previous IN-SPACe authorizations (Fill N/A if
+                            there is no such)
+
+                        </span>
+                        <br>
+                        <br>
+                        <textarea id="simple-textarea" placeholder="Enter details here..."
+                            style="width: 100%; height: 100px; resize: vertical;"></textarea>
+                    </div>
+                    <br>
+                    <br>
+                    <div class="title">Entity Details</div>
+                    <br>
+                    <div class="dropdown-container">
+                        <span class="dropdown-title">Choose the category of NGE/Government Entity</span>
+                        <select id="entity-category" class="dropdown">
+                            <option value="" disabled selected>Select an option</option>
+                            <option value="company">Company incorporated under the Companies Act, 2013</option>
+                            <option value="partnership">Partnership firm established under the Indian Partnership Act
+                                and Limited Liability Partnership Act, 2008</option>
+                            <option value="trust">Trust under the Indian Trust Act, 1882</option>
+                            <option value="association">Association of persons or body of individuals incorporated in
+                                India</option>
+                        </select>
+                    </div>
+                    <div class="dropdown-container">
+                        <span class="dropdown-title">Constitution of the entity</span>
+                        <select id="entity-constitution" class="dropdown">
+                            <option value="" disabled selected>Select an option</option>
+                            <option value="LLP">LLP</option>
+                            <option value="public-ltd">Public Ltd</option>
+                            <option value="private-ltd">Pvt Ltd</option>
+                            <option value="trust">Trust</option>
+                            <option value="psu">PSU</option>
+                            <option value="cpse">CPSE</option>
+                            <option value="other-legal-entity">Other Legal Entity</option>
+                        </select>
+                        <!-- Textarea for 'Other Legal Entity' option -->
+                        <div id="other-legal-entity-textarea" style="display: none;">
+                            <label for="other-legal-entity-detail">Please specify:</label>
+                            <textarea id="other-legal-entity-detail" placeholder="Enter details here..."
+                                style="width: 100%; height: 100px; resize: vertical;"></textarea>
+                        </div>
+                    </div>
+                    <div class="registration-date-container">
+                        <!-- Registration Number Section -->
+                        <div class="registration-container">
+                            <span class="registration-title">Registration Number (CIN / LLPIN / Partnership Registration
+                                Number / Such Other Registration Number provided by the appropriate Government
+                                Agencies)</span>
+                            <input type="text" id="registration-number" class="registration-input"
+                                placeholder="Enter Registration Number">
+                        </div>
+
+                        <!-- Date of Incorporation Section -->
+                        <div class="date-container" style="margin-top: 55px;">
+                            <span class="date-title">Date of Incorporation/Establishment</span>
+                            <input type="date" id="incorporation-date" class="date-input">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <!-- PAN/TAN Number Section -->
+                        <div class="form-column">
+                            <label for="pan-number" class="form-label">PAN/TAN Number</label>
+                            <input type="text" id="pan-number" class="form-input" placeholder="Enter PAN/TAN Number">
+                        </div>
+
+                        <!-- GSTIN Number Section -->
+                        <div class="form-column">
+                            <label for="gstin-number" class="form-label">GSTIN Number</label>
+                            <input type="text" id="gstin-number" class="form-input" placeholder="Enter GSTIN Number">
+                        </div>
+                    </div>
+                    <br>
+                    <br>
+                    <div class="title">Startup and MMSE Details</div>
+                    <br>
+
+
+                    <!-- Section 3: Enterprise Type -->
+                    <div class="form-group">
+                        <label for="enterprise-type" class="form-label">Specify the type of enterprise</label>
+                        <select id="enterprise-type" required>
+                            <option value="" disabled selected>Select an option</option>
+                            <option value="startup">Start up</option>
+                            <option value="small-enterprise">Small Enterprise</option>
+                            <option value="micro-enterprise">Micro Enterprise</option>
+                            <option value="medium-enterprise">Medium Enterprise</option>
+                            <option value="na">N/A</option>
+                        </select>
+                    </div>
+                    <br>
+                    <!-- Section 3: Registration and Certificate -->
+                    <div class="form-group" id="registration-details" style="display: none;">
+                        <label for="registration-number">Registration Number</label>
+                        <input type="text" id="registration-number" placeholder="Enter your registration number"
+                            required>
+                    </div>
+                    <br>
+                    <div class="form-group" id="registration-date" style="display: none;">
+                        <label for="registration-date">Date of Registration</label>
+                        <input type="date" id="registration-date" required>
+                    </div>
+                    <br>
+                    <div class="form-group" id="upload-certificate" style="display: none;">
+                        <label for="certificate-upload">Upload certificate provided by DPIIT and Ministry of
+                            MSME</label>
+                        <input type="file" id="certificate-upload" accept=".pdf,.jpg,.jpeg,.png" required>
+                    </div>
+                    <br>
+                    <br>
+                    <div class="title">Incubator and Joint Venture Details
+                    </div>
+                    <br>
+                    <!-- Incubation Section -->
+                    <div class="form-group">
+                        <label for="incubated" class="form-label">Are you incubated?</label>
+                        <select id="incubated" required onchange="toggleIncubationDetails()">
+                            <option value="" disabled selected>Select an option</option>
+                            <option value="Y">Yes</option>
+                            <option value="N">No</option>
+                        </select>
+                    </div>
+
+
+                    <!-- Incubation Details Section (Visible if "Yes" is selected) -->
+                    <div class="form-group" id="incubation-details" style="display: none;">
+                        <label for="incubation-info">Provide Incubation Details</label>
+                        <textarea id="incubation-info" placeholder="Enter incubation details" rows="4"
+                            required></textarea>
+                    </div>
+                    <br>
+
+                    <!-- Joint Venture Section -->
+                    <div class="form-group">
+                        <label for="joint-venture" class="form-label">If a Joint Venture, provide partner details and
+                            their shares</label>
+                        <textarea id="joint-venture" placeholder="Enter partner details and their shares" rows="4"
+                            required></textarea>
+                    </div>
+                    <div class="title">Credentials</div>
+                    <br>
+                    <!-- Section 4: Financial, Technical, and Managerial Credentials -->
+                    <div class="form-group">
+                        <label for="credentials" class="form-label">Provide details of your financial, technical, and
+                            managerial credentials related to space activities</label>
+                        <textarea id="credentials" placeholder="Enter details of your credentials" required></textarea>
+                    </div>
+                    <br>
+
+                    <!-- Section 5: Upload Key Documents -->
+                    <div class="form-group">
+                        <label for="key-documents" class="form-label">Upload key documents (e.g., MOA, AOA, LLP
+                            Agreement as applicable)</label>
+                        <input type="file" id="key-documents" accept=".pdf,.docx,.jpg,.jpeg,.png" required multiple>
+                    </div>
+                    <br>
+
+
+
+
                     <!-- Submit button -->
                     <div class="button">
-                        <input type="submit" value="Register">
+                        <input type="submit" value="Next">
                     </div>
                 </form>
             </div>
