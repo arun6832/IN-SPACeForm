@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Declaration Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="sidebar">
+            <!-- Vertical Progress Bar -->
+            <div class="progress-bar">
+                <div class="progress-step">
+                    <div class="dot" id="dot-1"><span class="dot-number">1</span></div>
+                    <div class="label" id="label-1">Section 1</div>
+                    <div class="line" id="line-1"></div>
+                </div>
+                <div class="progress-step">
+                    <div class="dot" id="dot-2"><span class="dot-number">2</span></div>
+                    <div class="label" id="label-2">Section 2</div>
+                    <div class="line" id="line-2"></div>
+                </div>
+                <div class="progress-step">
+                    <div class="dot" id="dot-3"><span class="dot-number">3</span></div>
+                    <div class="label" id="label-3">Section 3</div>
+                </div>
+            </div>
+            <!-- Sidebar Logo -->
+            <img src="IN-SPACeForm/IN-SPACe_Logo.png" alt="Logo" class="sidebar-logo">
+        </div>
+
+        <div class="container">
+            <!-- Title section -->
+            <div class="title">Declaration Form</div>
+            <div class="content">
+                <form action="#">
+                    <!-- Declaration Statements -->
+                    <div class="form-group">
+                        <label for="declaration-a">
+                            <input type="checkbox" id="declaration-a" required>
+                            A. We hereby affirm that we have read and understood the existing laws, rules, regulations, and policies, and are compliant with applicable laws, rules, regulations, and policies...
+                        </label>
+                    </div>
+                    <div class="form-group">
+                        <label for="declaration-b">
+                            <input type="checkbox" id="declaration-b" required>
+                            B. We hereby declare that the above statements, information and data provided by us in this application form are true and correct to the best of our knowledge...
+                        </label>
+                    </div>
+                    <div class="form-group">
+                        <label for="declaration-c">
+                            <input type="checkbox" id="declaration-c" required>
+                            C. We hereby declare that the Applicant and its key managerial personnel... have not been convicted or are not subject to any proceedings...
+                        </label>
+                    </div>
+                    <div class="form-group">
+                        <label for="declaration-d">
+                            <input type="checkbox" id="declaration-d" required>
+                            D. We hereby declare that the Applicant is not bankrupt or being wound up / liquidated; does not have its affairs administered by the courts...
+                        </label>
+                    </div>
+                    <div class="form-group">
+                        <label for="declaration-e">
+                            <input type="checkbox" id="declaration-e" required>
+                            E. We undertake that we shall inform IN-SPACe in writing and through email, within 48 (forty-eight) hours of any change in ‘Management and Control’...
+                        </label>
+                    </div>
+
+                    <!-- Applicant Details -->
+                    <div class="form-group">
+                        <label for="applicant-name">Name of the Applicant:</label>
+                        <input type="text" id="applicant-name" placeholder="Enter applicant's name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="applicant-address">Full Address:</label>
+                        <textarea id="applicant-address" placeholder="Enter full address" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="applicant-seal">Official Seal or Stamp:</label>
+                        <input type="file" id="applicant-seal" accept=".png, .jpg, .jpeg, .pdf" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="applicant-place">Place:</label>
+                        <input type="text" id="applicant-place" placeholder="Enter place" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="applicant-date">Date:</label>
+                        <input type="date" id="applicant-date" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="applicant-phone">Phone Number:</label>
+                        <input type="tel" id="applicant-phone" placeholder="Enter phone number" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="applicant-email">Email:</label>
+                        <input type="email" id="applicant-email" placeholder="Enter email address" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="applicant-website">Website:</label>
+                        <input type="url" id="applicant-website" placeholder="Enter website URL" required>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <div class="button">
+                        <input type="submit" value="Submit">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
