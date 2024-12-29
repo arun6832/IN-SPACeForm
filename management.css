@@ -11,7 +11,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: fit-content;
+  height:fit-content;
 }
 
 .wrapper {
@@ -76,14 +76,10 @@ body {
 }
 
 .sidebar-logo {
-  margin-top: auto;
-  /* Push the logo to the bottom */
-  width: 60px;
-  /* Adjust logo size */
-  height: auto;
-  /* Maintain aspect ratio */
-  padding-top: 20px;
-  /* Space above the logo */
+  margin-top: auto; /* Push the logo to the bottom */
+  width: 60px; /* Adjust logo size */
+  height: auto; /* Maintain aspect ratio */
+  padding-top: 20px; /* Space above the logo */
 }
 
 
@@ -151,7 +147,7 @@ body {
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
   margin-left: 420px;
   margin-top: 20px;
-  height: fit-content;
+  height:fit-content;
 }
 
 .container .title {
@@ -438,8 +434,7 @@ form .button input:hover {
 
 /* Styling for the PAN/TAN container */
 .pan-container {
-  flex: 1;
-  /* Take up equal space */
+  flex: 1; /* Take up equal space */
 }
 
 /* Title for the PAN/TAN input */
@@ -471,8 +466,7 @@ form .button input:hover {
 
 /* Styling for the GSTIN container */
 .gstin-container {
-  flex: 1;
-  /* Take up equal space */
+  flex: 1; /* Take up equal space */
 }
 
 /* Title for the GSTIN input */
@@ -505,131 +499,99 @@ form .button input:hover {
 /* Container for the two input fields */
 .form-row {
   display: flex;
-  gap: 2rem;
-  /* Adds space between the inputs */
-  margin-bottom: 1.5rem;
-  /* Adds space below the row */
+  gap: 2rem; /* Adds space between the inputs */
+  margin-bottom: 1.5rem; /* Adds space below the row */
 }
 
 /* Individual input containers */
 .form-column {
-  flex: 1;
-  /* Each container takes up 50% of the available space */
+  flex: 1; /* Each container takes up 50% of the available space */
 }
 
 /* Styling for the label */
 .form-label {
   display: block;
-  font-size: 1.125rem;
-  /* Equivalent to text-lg in Tailwind */
-  font-weight: 600;
-  /* Equivalent to font-semibold in Tailwind */
-  color: #2d3748;
-  /* Equivalent to text-gray-800 in Tailwind */
-  margin-bottom: 0.5rem;
-  /* Space below the label */
+  font-size: 1.125rem; /* Equivalent to text-lg in Tailwind */
+  font-weight: 600; /* Equivalent to font-semibold in Tailwind */
+  color: #2d3748; /* Equivalent to text-gray-800 in Tailwind */
+  margin-bottom: 0.5rem; /* Space below the label */
 }
 
 /* Styling for the input fields */
 .form-input {
-  width: 100%;
-  /* Takes up the full width of the parent container */
-  padding: 0.5rem 1rem;
-  /* Equivalent to px-4 py-2 in Tailwind */
-  border: 1px solid #e2e8f0;
-  /* Equivalent to border-gray-300 in Tailwind */
-  border-radius: 0.375rem;
-  /* Equivalent to rounded-md in Tailwind */
-  box-sizing: border-box;
-  /* Ensures padding is included in width calculation */
+  width: 100%; /* Takes up the full width of the parent container */
+  padding: 0.5rem 1rem; /* Equivalent to px-4 py-2 in Tailwind */
+  border: 1px solid #e2e8f0; /* Equivalent to border-gray-300 in Tailwind */
+  border-radius: 0.375rem; /* Equivalent to rounded-md in Tailwind */
+  box-sizing: border-box; /* Ensures padding is included in width calculation */
 }
 
 /* Focused input styling */
 .form-input:focus {
   outline: none;
-  border-color: #3182ce;
-  /* Equivalent to focus:border-blue-500 */
-  box-shadow: 0 0 0 2px rgba(66, 153, 225, 0.5);
-  /* Equivalent to focus:ring-2 focus:ring-blue-500 */
+  border-color: #3182ce; /* Equivalent to focus:border-blue-500 */
+  box-shadow: 0 0 0 2px rgba(66, 153, 225, 0.5); /* Equivalent to focus:ring-2 focus:ring-blue-500 */
 }
 
 /* Styling for input fields and labels */
-.form-group select,
-.form-group input[type="text"],
-.form-group input[type="date"],
+.form-group select, 
+.form-group input[type="text"], 
+.form-group input[type="date"], 
 .form-group input[type="file"] {
-  width: 100%;
-  padding: 12px;
-  border: 2px solid #ccc;
-  border-radius: 8px;
-  font-size: 16px;
-  transition: border 0.3s ease;
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border 0.3s ease;
 }
 
-.form-group select:focus,
-.form-group input[type="text"]:focus,
-.form-group input[type="date"]:focus,
+.form-group select:focus, 
+.form-group input[type="text"]:focus, 
+.form-group input[type="date"]:focus, 
 .form-group input[type="file"]:focus {
-  border-color: #9b59b6;
+    border-color: #9b59b6;
 }
 
 .form-group label {
-  font-weight: 500;
-  margin-bottom: 8px;
-  display: block;
+    font-weight: 500;
+    margin-bottom: 8px;
+    display: block;
 }
 
 /* General Styling for Form Elements */
 .form-group {
-  margin-bottom: 1.5rem;
-  /* Adds spacing between form groups */
+  margin-bottom: 1.5rem; /* Adds spacing between form groups */
 }
 
 .form-group label {
   display: block;
-  font-size: 1.125rem;
-  /* Equivalent to text-lg in Tailwind */
-  font-weight: 600;
-  /* Equivalent to font-semibold in Tailwind */
-  color: #2d3748;
-  /* Equivalent to text-gray-800 in Tailwind */
-  margin-bottom: 0.5rem;
-  /* Space below the label */
+  font-size: 1.125rem; /* Equivalent to text-lg in Tailwind */
+  font-weight: 600; /* Equivalent to font-semibold in Tailwind */
+  color: #2d3748; /* Equivalent to text-gray-800 in Tailwind */
+  margin-bottom: 0.5rem; /* Space below the label */
 }
 
-.form-group input,
-.form-group select,
-.form-group textarea {
-  width: 100%;
-  /* Makes the input take up full width */
-  padding: 0.5rem 1rem;
-  /* Padding for better spacing inside */
-  border: 1px solid #ccc;
-  /* Border style */
-  border-radius: 5px;
-  /* Rounded corners */
+.form-group input, .form-group select, .form-group textarea {
+  width: 100%; /* Makes the input take up full width */
+  padding: 0.5rem 1rem; /* Padding for better spacing inside */
+  border: 1px solid #ccc; /* Border style */
+  border-radius: 5px; /* Rounded corners */
   font-size: 14px;
-  box-sizing: border-box;
-  /* Includes padding in width calculation */
+  box-sizing: border-box; /* Includes padding in width calculation */
 }
 
 /* Focused input and textarea styling */
-.form-group input:focus,
-.form-group select:focus,
-.form-group textarea:focus {
-  border-color: #3182ce;
-  /* Blue border on focus */
+.form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+  border-color: #3182ce; /* Blue border on focus */
   outline: none;
-  box-shadow: 0 0 0 2px rgba(66, 153, 225, 0.5);
-  /* Blue glow */
+  box-shadow: 0 0 0 2px rgba(66, 153, 225, 0.5); /* Blue glow */
 }
 
 /* Hidden sections initially */
 #incubation-details {
-  display: none;
-  /* Hidden by default */
+  display: none; /* Hidden by default */
 }
-
 .button-link,
 input[type="submit"] {
   display: inline-block;

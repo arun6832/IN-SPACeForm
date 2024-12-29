@@ -1,0 +1,351 @@
+:root {
+    --dark-blue: #1a2a44;
+    --light-blue: #00aaff;
+    --gray: #d3d3d3;
+    --light-gray: #f3f4f6;
+    --primary-color: #9b59b6;
+    --input-focus-color: #71b7e6;
+}
+
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: var(--light-gray);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.wrapper {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--dark-blue);
+    padding: 20px 10px;
+    width: 120px;
+    height: 1025px;
+}
+
+.progress-bar {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+
+.progress-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.dot {
+    width: 30px;
+    height: 30px;
+    background-color: var(--gray);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    transition: background-color 0.5s ease, transform 0.3s ease;
+}
+
+.dot-number {
+    font-size: 12px;
+    color: black;
+}
+
+.dot.active {
+    background-color: var(--light-blue);
+    transform: scale(1.2);
+}
+
+.line {
+    width: 4px;
+    height: 60px;
+    background-color: var(--gray);
+    transition: background-color 0.5s ease, height 0.5s ease;
+}
+
+.line.filled {
+    background-color: var(--light-blue);
+}
+
+.label {
+    margin-top: 5px;
+    font-size: 14px;
+    color: white;
+}
+
+.container {
+    max-width: 800px;
+    width: 100%;
+    background-color: #fff;
+    padding: 30px 35px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    margin-left: 150px;
+    margin-top: 20px;
+    height: fit-content;
+}
+
+.container .title {
+    font-size: 26px;
+    font-weight: 600;
+    color: var(--dark-blue);
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.container .title::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 40px;
+    border-radius: 5px;
+    background: linear-gradient(135deg, #71b7e6, #9b59b6);
+}
+
+.content form .user-details {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px 0 12px 0;
+}
+
+form .user-details .input-box {
+    margin-bottom: 15px;
+    width: calc(100% / 2 - 20px);
+    position: relative;
+}
+
+form .user-details .input-box input {
+    height: 45px;
+    width: 100%;
+    outline: none;
+    font-size: 16px;
+    border-radius: 5px;
+    padding-left: 15px;
+    border: 1px solid #ccc;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+}
+
+form .user-details .input-box input:focus,
+form .user-details .input-box input:valid {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 5px var(--input-focus-color);
+}
+
+form .user-details .input-box label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+form .button {
+    height: 45px;
+    margin: 35px 0;
+    display: flex;
+    justify-content: center;
+}
+
+form .button input {
+    height: 100%;
+    width: 50%;
+    border-radius: 5px;
+    border: none;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background: linear-gradient(135deg, #71b7e6, #9b59b6);
+}
+
+form .button input:hover {
+    background: linear-gradient(-135deg, #71b7e6, #9b59b6);
+}
+
+input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #f1f1f1;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+}
+
+input[type="file"]:focus {
+    border-color: var(--primary-color);
+}
+
+small {
+    font-size: 12px;
+    color: #888;
+}
+
+h3 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+textarea {
+    width: 100%;
+    height: 120px;
+    border-radius: 5px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    resize: vertical;
+    box-sizing: border-box;
+}
+
+textarea:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 5px var(--input-focus-color);
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .container {
+        margin-left: 20px;
+        padding: 20px;
+    }
+
+    .wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .sidebar {
+        width: 100%;
+        height: auto;
+        padding: 10px 0;
+    }
+
+    .progress-bar {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .progress-step {
+        align-items: center;
+    }
+
+    .progress-step .dot {
+        margin-bottom: 5px;
+    }
+
+    .progress-step .line {
+        width: 20px;
+        height: 2px;
+    }
+
+    form .user-details .input-box {
+        width: 100%;
+    }
+
+    form .button input {
+        width: 100%;
+    }
+}
+
+/* Mobile-friendly form inputs */
+@media (max-width: 480px) {
+    .user-details .input-box input {
+        padding-left: 12px;
+        font-size: 14px;
+    }
+
+    .form-section {
+        padding-bottom: 30px;
+    }
+}
+
+/* Additional Information Section (Same Row Layout) */
+#additional-information .user-details {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    /* Adds space between the input boxes */
+}
+
+#additional-information .input-box {
+    margin-bottom: 25px;
+    /* Increases space below input boxes */
+    width: calc(50% - 20px);
+    /* Ensures there is enough space between input boxes */
+}
+
+#additional-information .input-box input,
+#additional-information .input-box textarea {
+    width: 100%;
+    outline: none;
+    font-size: 16px;
+    border-radius: 5px;
+    padding-left: 15px;
+    border: 1px solid #ccc;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+}
+
+#additional-information .input-box input:focus,
+#additional-information .input-box textarea:focus {
+    border-color: #9b59b6;
+}
+
+#additional-information .input-box label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 10px;
+    /* Increases space between label and input */
+}
+
+/* Adjustments for smaller screens */
+@media(max-width: 768px) {
+    #additional-information .input-box {
+        width: 100%;
+        /* Full width for smaller screens */
+    }
+
+    #additional-information .user-details {
+        gap: 15px;
+        /* Adjusts gap for smaller screens */
+    }
+}
+
+.button-link,
+input[type="submit"] {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #1a2a44;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button-link:hover,
+input[type="submit"]:hover {
+    background-color: #314a72;
+}

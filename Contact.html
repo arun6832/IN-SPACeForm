@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Details</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <link rel="stylesheet" href="contact.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="sidebar">
+            <div class="progress-bar">
+                <div class="progress-step">
+                    <div class="dot" id="dot-1"><span class="dot-number">1</span></div>
+                    <div class="label" id="label-1">Basic Details</div>
+                    <div class="line" id="line-1"></div>
+                </div>
+                <div class="progress-step">
+                    <div class="dot" id="dot-2"><span class="dot-number">2</span></div>
+                    <div class="label" id="label-2">Management & <p style="margin-left: 20px;margin-top: -1px;"> Control
+                        </p>
+                    </div><br>
+                    <div class="line" id="line-2"></div>
+                </div>
+                <div class="progress-step">
+                    <div class="dot" id="dot-3"><span class="dot-number">3</span></div>
+                    <div class="label" id="label-3">Contact Details</div>
+                    <div class="line" id="line-3"></div>
+                </div>
+                <div class="progress-step">
+                    <div class="dot" id="dot-4"><span class="dot-number">4</span></div>
+                    <div class="label" id="label-4">Declarations</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <!-- Title section -->
+            <div class="title">Contact Details</div>
+            <div class="content">
+                <!-- Registration form -->
+                <form action="#">
+
+                    <!-- Contact Details (Section 3) -->
+                    <div id="contact-details" class="form-section">
+                        <div class="user-details">
+                            <div class="input-box">
+                                <span class="details">Registered Office Address</span>
+                                <input type="text" placeholder="Enter registered office address" required>
+                            </div>
+                            <div class="input-box">
+                                <span class="details">Corporate Office Address (if different)</span>
+                                <input type="text" placeholder="Enter corporate office address" required>
+                            </div>
+                            <div class="input-box">
+                                <span class="details">Correspondence Address</span>
+                                <input type="text" placeholder="Enter correspondence address" required>
+                            </div>
+                            <div class="input-box">
+                                <span class="details">Contact Phone Number</span>
+                                <input type="tel" placeholder="Enter phone number" required>
+                            </div>
+                            <div class="input-box">
+                                <span class="details">Contact Email Address</span>
+                                <input type="email" placeholder="Enter email address" required>
+                            </div>
+                            <div class="input-box">
+                                <span class="details">Website URL (if applicable)</span>
+                                <input type="url" placeholder="Enter website URL" required>
+                            </div>
+                        </div>
+
+                        <h3>Authorized Contact Persons</h3>
+                        <div class="user-details">
+                            <div class="input-box">
+                                <span class="details">Primary Contact (Authorized Signatory)</span>
+                                <input type="text" placeholder="Name" required>
+                                <input type="text" placeholder="Designation" required>
+                                <input type="tel" placeholder="Mobile" required>
+                                <input type="email" placeholder="Email" required>
+                            </div>
+                            <div class="input-box">
+                                <span class="details">Secondary Contact</span>
+                                <input type="text" placeholder="Name" required>
+                                <input type="text" placeholder="Designation" required>
+                                <input type="tel" placeholder="Mobile" required>
+                                <input type="email" placeholder="Email" required>
+                            </div>
+                        </div>
+
+                        <div id="additional-information" class="form-section">
+                            <h3>Additional Information</h3>
+
+                            <!-- Point 39: Textarea for Additional Information -->
+                            <div class="user-details">
+                                <div class="input-box">
+                                    <label for="security-clearance" class="details">Provide additional information as
+                                        per the Security Clearance Proforma given in Annexure-1, if sought by
+                                        IN-SPACe</label>
+                                    <textarea id="security-clearance"
+                                        placeholder="Provide additional information here..." required></textarea>
+                                </div>
+
+                                <!-- Point 40: File Input for Document Upload -->
+                                <div class="input-box">
+                                    <label for="documentary-evidence" class="details">Provide documentary evidence to
+                                        substantiate whether the person, who is submitting this application, is
+                                        authorized to submit this application to IN-SPACe on behalf of the
+                                        Applicant.</label>
+                                    <input type="file" id="documentary-evidence" accept=".pdf,.jpg,.jpeg,.png" required>
+                                    <small>Accepted formats: PDF, JPG, JPEG, PNG</small>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                        <!-- next button -->
+                        <div class="button" style="margin-left: 627px;">
+                            <a href="next_page.html" class="button-link">Next</a>
+                        </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

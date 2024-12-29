@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Management and Control Form</title>
+    <link rel="stylesheet" href="management.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="sidebar">
+            <!-- Vertical Progress Bar -->
+            <div class="progress-bar">
+                <div class="progress-step">
+                    <div class="dot" id="dot-1"><span class="dot-number">1</span></div>
+                    <div class="label" id="label-1">Basic Details</div>
+                    <div class="line" id="line-1"></div>
+                </div>
+                <div class="progress-step">
+                    <div class="dot" id="dot-2"><span class="dot-number">2</span></div>
+                    <div class="label" id="label-2">Management & <p style="margin-left: 20px;margin-top: -1px;"> Control</p></div><br>
+                    <div class="line" id="line-2"></div>
+                </div>
+                <div class="progress-step">
+                    <div class="dot" id="dot-3"><span class="dot-number">3</span></div>
+                    <div class="label" id="label-3">Contact Details</div>
+                    <div class="line" id="line-3"></div>
+                </div>
+                <div class="progress-step">
+                    <div class="dot" id="dot-4"><span class="dot-number">4</span></div>
+                    <div class="label" id="label-4">Declarations</div>
+                </div>
+            </div>
+            <!-- Sidebar Logo -->
+            <img src="IN-SPACeForm/IN-SPACe_Logo.png" alt="Logo" class="sidebar-logo">
+        </div>
+
+        <div class="container">
+            <!-- Title section -->
+            <div class="title">Management and Control Details</div>
+            <div class="content">
+                <form action="#">
+                    <!-- Applicant's Directors Details -->
+                    <div class="user-details">
+                        <div class="input-box">
+                            <span class="details">Director's Name</span>
+                            <input type="text" placeholder="Enter director's name" required>
+                        </div>
+                        <div class="input-box">
+                            <span class="details">Proof of Address</span>
+                            <input type="file" accept=".pdf, .jpg, .png" required>
+                        </div>
+                        <div class="input-box">
+                            <span class="details">Proof of Identity</span>
+                            <input type="file" accept=".pdf, .jpg, .png" required>
+                        </div>
+                        <div class="input-box">
+                            <span class="details">Contact Details</span>
+                            <input type="text" placeholder="Enter contact details" required>
+                        </div>
+                        <div class="input-box">
+                            <span class="details">Nationality</span>
+                            <input type="text" placeholder="Enter nationality" required>
+                        </div>
+                        <div class="input-box">
+                            <span class="details">Current Residence</span>
+                            <input type="text" placeholder="Enter current residence" required>
+                        </div>
+                    </div>
+
+                    <!-- Foreign Nationals in Key Roles -->
+                    <div class="gender-details">
+                        <span class="gender-title">Does the Applicant have a foreign national in key roles?</span>
+                        <div class="category">
+                            <label for="foreign-yes">
+                                <input type="checkbox" id="foreign-yes" class="checkbox"
+                                    onclick="toggleTextarea('foreign-details', true, 'foreign-no')">
+                                <span class="dot one"></span>
+                                <span class="gender">Yes</span>
+                            </label>
+                            <label for="foreign-no">
+                                <input type="checkbox" id="foreign-no" class="checkbox"
+                                    onclick="toggleTextarea('foreign-details', false, 'foreign-yes')">
+                                <span class="dot two"></span>
+                                <span class="gender">No</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div id="foreign-details" style="display: none;">
+                        <label for="foreign-info">Provide details:</label>
+                        <textarea id="foreign-info" placeholder="Enter details here..."></textarea>
+                    </div>
+
+                    <!-- Shareholders or Partners Details -->
+                    <div class="form-group">
+                        <label for="shareholders">Details of shareholders holding 10% or more:</label>
+                        <textarea id="shareholders" placeholder="Enter shareholder details" required></textarea>
+                    </div>
+
+                    <!-- Indian Management and Control -->
+                    <div class="gender-details">
+                        <span class="gender-title">Is the Applicant under Indian Management and Control?</span>
+                        <div class="category">
+                            <label for="indian-yes">
+                                <input type="checkbox" id="indian-yes" class="checkbox"
+                                    onclick="toggleTextarea('indian-details', false, 'indian-no')">
+                                <span class="dot one"></span>
+                                <span class="gender">Yes</span>
+                            </label>
+                            <label for="indian-no">
+                                <input type="checkbox" id="indian-no" class="checkbox"
+                                    onclick="toggleTextarea('indian-details', true, 'indian-yes')">
+                                <span class="dot two"></span>
+                                <span class="gender">No</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div id="indian-details" style="display: none;">
+                        <label for="indian-info">Provide details:</label>
+                        <textarea id="indian-info" placeholder="Enter details here..."></textarea>
+                    </div>
+
+                    <!-- Criminal Records -->
+                    <div class="form-group">
+                        <label for="criminal-record">Have any criminal records been registered against key
+                            personnel?</label>
+                        <select id="criminal-record" required>
+                            <option value="" disabled selected>Select an option</option>
+                            <option value="yes">Yes</option>
+                            <option value="no">No</option>
+                        </select>
+                        <textarea id="criminal-details" placeholder="Provide details if Yes"
+                            style="display:none;"></textarea>
+                    </div>
+
+                    <!-- Financial Details -->
+                    <div class="form-group">
+                        <label for="net-worth">Applicant's Net Worth</label>
+                        <input type="text" id="net-worth" placeholder="Enter net worth" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="annual-reports">Upload Annual Reports (last 3 years)</label>
+                        <input type="file" id="annual-reports" accept=".pdf,.jpg,.jpeg,.png" multiple required>
+                    </div>
+                    <div class="form-group">
+                        <label for="income-tax">Upload Income Tax Returns (last 3 years)</label>
+                        <input type="file" id="income-tax" accept=".pdf,.jpg,.jpeg,.png" multiple required>
+                    </div>
+                    <div class="form-group">
+                        <label for="gst-returns">Upload GST Returns (last 6 months)</label>
+                        <input type="file" id="gst-returns" accept=".pdf,.jpg,.jpeg,.png" multiple required>
+                    </div>
+
+                    <!-- Foreign Direct Investment -->
+                    <div class="form-group">
+                        <label for="fdi">Foreign Direct Investment Details</label>
+                        <textarea id="fdi" placeholder="Provide FDI details (if applicable)"></textarea>
+                    </div>
+
+                    <!-- Operational Capabilities -->
+                    <div class="form-group">
+                        <label for="capabilities">Operational, Infrastructural, and Technical Capabilities</label>
+                        <textarea id="capabilities" placeholder="Describe your capabilities" required></textarea>
+                    </div>
+
+                    <!-- Special Approvals -->
+                    <div class="form-group">
+                        <label for="special-approvals">Special Approvals (if applicable)</label>
+                        <input type="file" id="special-approvals" accept=".pdf,.jpg,.jpeg,.png" multiple>
+                    </div>
+
+                    <!-- Submit button -->
+                    <div class="button" style="margin-left: 627px;">
+                        <a href="Contact.html" class="button-link">Next</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.getElementById("criminal-record").addEventListener("change", function () {
+            const details = document.getElementById("criminal-details");
+            if (this.value === "yes") {
+                details.style.display = "block";
+            } else {
+                details.style.display = "none";
+            }
+        });
+    </script>
+</body>
+
+</html>
